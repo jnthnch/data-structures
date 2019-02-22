@@ -9,14 +9,14 @@ class Queue {
 
   enqueue(value) {
     this.storage[this.lastKey] = value;
-    this.lastKey++
+    this.lastKey++;
   }
 
   dequeue() {
-    var firstValue = this.storage[this.firstKey]
+    var firstValue = this.storage[this.firstKey];
     // remove first value from Object;
     delete this.storage[this.firstKey];
-    this.firstKey++
+    this.firstKey++;
     return firstValue;
   }
 
@@ -24,7 +24,7 @@ class Queue {
     if (this.firstKey > this.lastKey) {
       return 0;
     }
-    return this.lastKey - this.firstKey
+    return this.lastKey - this.firstKey;
   }
 
 }

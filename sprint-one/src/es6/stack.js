@@ -9,14 +9,14 @@ class Stack {
 
   push(value) {
     this.storage[this.lastKey] = value;
-    this.lastKey++
+    this.lastKey++;
   }
 
   pop() {
     var lastValue = this.storage[this.lastKey - 1];
     // remove first value from Object;
-    delete this.storage[this.lastKey  - 1];
-    this.lastKey--
+    delete this.storage[this.lastKey - 1];
+    this.lastKey--;
     return lastValue;
   }
 
@@ -24,7 +24,7 @@ class Stack {
     if (this.firstKey > this.lastKey) {
       return 0;
     }
-    return this.lastKey - this.firstKey
+    return this.lastKey - this.firstKey;
   }
 
 }

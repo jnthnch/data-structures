@@ -6,24 +6,22 @@ var Queue = function() {
   this.lastKey = 0;
 };
 
-
-
-Queue.prototype.enqueue =  function(value) {
+Queue.prototype.enqueue = function(value) {
   this.storage[this.lastKey] = value;
-  this.lastKey++
-}
+  this.lastKey++;
+};
 
 Queue.prototype.dequeue = function() {
-  var firstValue = this.storage[this.firstKey]
+  var firstValue = this.storage[this.firstKey];
   // remove first value from Object;
   delete this.storage[this.firstKey];
-  this.firstKey++
+  this.firstKey++;
   return firstValue;
-}
+};
 
 Queue.prototype.size = function() {
   if (this.firstKey > this.lastKey) {
     return 0;
   }
-  return this.lastKey - this.firstKey
-}
+  return this.lastKey - this.firstKey;
+};

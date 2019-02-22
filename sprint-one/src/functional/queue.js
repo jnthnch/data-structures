@@ -21,7 +21,7 @@ var Queue = function() {
   someInstance.dequeue = function() {
     var keysArray = Object.keys(someInstance.storage);
     var firstKey = keysArray[0];
-    var firstValue = someInstance.storage[firstKey]
+    var firstValue = someInstance.storage[firstKey];
     // remove first value from Object;
     delete someInstance.storage[firstKey];
     return firstValue;
